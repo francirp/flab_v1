@@ -5,47 +5,49 @@ $bunk-bed-color: $grey-dark
 .main-callout-area
   @extend .text-align-center
   @include outer-container
-.products
-  margin-top: 100px
+.home
+  .products
+    margin-top: 100px
 
-  .product-callout
-    @extend .float-left
-    width: 50%
+    .product-callout
+      @extend .float-left
+      width: 50%
 
-    // LOFT BED & BUNK BED STYLES
-    .featured-image
-      width: 100%
-      height: 500px
-
-    .product-title-area
-      height: $product-title-height
-
-    .product-title
-      @extend %font-size-big
-      line-height: $product-title-height
-      a
-        @extend %color-white-base
-      text-align: center
-
-    @include media($tablet-landscape)
-      width: 100%
-
-
-    // LOFT BED STYLES
-    &.loft-bed
-      .product-title-area
-        background-color: $loft-bed-color
-
+      // LOFT BED & BUNK BED STYLES
       .featured-image
-        @include standardBackgroundImage('home_loft.jpg')
-        background-position: center left
+        width: 100%
+        height: 500px
 
-
-    // BUNK BED STYLES
-    &.bunk-bed
       .product-title-area
-        background-color: $bunk-bed-color
+        height: $product-title-height
 
-      .featured-image
-        @include standardBackgroundImage('home_bunk.jpg')
-        background-size: cover
+      .product-title
+        @extend %font-size-big
+        @extend .margin-0
+        line-height: $product-title-height
+        a
+          @extend %color-white-base
+        text-align: center
+
+      @include media($tablet-landscape)
+        width: 100%
+
+
+      // LOFT BED STYLES
+      &.loft-bed
+        .product-title-area
+          background-color: $loft-bed-color
+
+        .featured-image
+          @include standardBackgroundImage('home_loft.jpg')
+          background-position: center left
+
+
+      // BUNK BED STYLES
+      &.bunk-bed
+        .product-title-area
+          background-color: $bunk-bed-color
+
+        .featured-image
+          @include standardBackgroundImage('home_bunk.jpg')
+          background-size: cover

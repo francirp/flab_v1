@@ -1,3 +1,5 @@
+- content_for :page_layout do
+  | page
 = render @product.template
 = yield :product_image
 = yield :product_description
