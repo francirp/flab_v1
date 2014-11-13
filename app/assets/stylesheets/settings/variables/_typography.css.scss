@@ -1,0 +1,59 @@
+//LAUNCHPAD LAB's FONTS VARIABLES
+
+  //FONT FAMILY
+  $sans-serif: "proxima-nova", Helvetica, sans-serif;
+  $slab-serif: "museo-slab", Georgia, serif;
+
+
+  //SIZES
+  $font-size-tiny:         11px;
+  $font-size-small:        12px;
+  $font-size-base:         16px;
+  $font-size-medium:       18px;
+  $font-size-big:          26px;
+  $font-size-bigger:       30px;
+  $font-size-huge:         35px;
+  $font-size-huger:        52px;
+  $font-size-toobig:       60px;
+
+  $font-size-mega:         75px;
+  $font-size-biggermega:   115px;
+  $font-size-doublemega:   150px;
+
+  //LINE HEIGHT
+  $base-line-height: $font-size-base * 1.3;
+
+
+  //FONT FAMILY LIST
+  $fonts: (
+    sans-base          400 normal $sans-serif,
+    sans-italic        400 italic $sans-serif,
+    sans-bold          700 normal $sans-serif,
+    sans-bold-italic   700 italic $sans-serif,
+    sans-black         800 normal $sans-serif,
+    sans-black-italic  800 italic $sans-serif,
+    slab-base          400 normal $slab-serif,
+    slab-base-italic   400 italic $slab-serif
+  );
+
+  //FONT SIZES LIST
+  $font-sizes: (
+    tiny          $font-size-tiny,
+    small         $font-size-small,
+    base          $font-size-base,
+    medium        $font-size-medium,
+    big           $font-size-big,
+    bigger        $font-size-bigger,
+    huge          $font-size-huge,
+    huger         $font-size-huger,
+    toobig        $font-size-toobig,
+    mega          $font-size-mega,
+    biggermega    $font-size-biggermega,
+    doublemega    $font-size-doublemega
+  );
+
+  //FONT COLORS
+  $font-colors: (
+    "white" $white-base,
+    "blue"  $blue-base
+  );

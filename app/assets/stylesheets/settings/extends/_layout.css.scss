@@ -1,0 +1,78 @@
+//LAUNCHPAD LAB's LAYOUT EXTENDS
+
+  //ALIGNMNET STYLE EXTENDS
+  @each $align in $alignments {
+    .veritcal-align-#{$align}{
+      vertical-align: $align;
+    };
+
+    .text-align-#{$align}{
+      text-align: $align;
+    };
+  };
+
+  //DISPLAY STYLE EXTENDS
+  @each $display in $displays {
+    .display-#{$display}{
+      display: $display;
+    }
+  };
+
+  //FLOAT STYLE EXTENDS
+  @each $float in $floats {
+    .float-#{$float}{
+      float: $float;
+    }
+  };
+
+  //POSITION STYLE EXTENDS
+  @each $position in $positions{
+    .position-#{$position}{
+      position: $position
+    }
+  };
+
+  //ZEROS STYLE EXTENDS
+  @each $zero in $zeros{
+    .#{$zero}-0{
+      #{$zero}: 0;
+    }
+  };
+
+  //LAYOUT PADDING
+  %layout-padding{
+    @include rem(padding, 0 20px);
+
+    @include media($tablet-landscape){@include rem(padding, 0);}
+  }
+
+  %layout-padding-full{
+    @include rem(padding, 0 20px);
+
+    @include media($tablet-landscape){@include rem(padding, 0);}
+  }
+
+
+  //CLEARFIX EXTEND
+  %clearfix {
+    @extend .display-block;
+    zoom:1;
+
+      &:after {
+        clear: both;
+        content: ".";
+        @extend .display-block;
+        height: 0;
+        visibility: hidden;
+      }
+    }
+
+ //OVERFLOW EXTEND
+  %overflowAuto {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+  }
+
+

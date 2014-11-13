@@ -1,0 +1,73 @@
+$topbar-color: black
+$topbar-height: 30px
+
+.header
+
+  .top-bar
+    @extend %font-type-sans-bold
+    @extend %background-blue-base
+    @extend %color-white-base
+    height: $topbar-height
+    line-height: $topbar-height
+
+    .info
+      @include outer-container
+      text-align: right
+
+      .email
+        @include span-columns(3)
+        @include shift(7)
+
+        @include media($tablet)
+          @include span-columns(5)
+          @include shift(1)
+
+      .phone
+        @include span-columns(2)
+        @include omega
+
+        @include media($tablet)
+          @include span-columns(5)
+          @include shift(1)
+
+  .navigation
+    padding-top: 20px
+    @include outer-container
+
+    .logo
+      @include span-columns(3)
+
+      .logo-image
+        max-width: 220px
+
+    .main-links
+      @include span-columns(7)
+      @include shift(2)
+      @include omega()
+      margin-top: 50px
+      text-align: right
+
+      li
+        display: inline
+        margin-left: 1.5rem
+
+      a
+        @extend %text-upper
+        @extend %font-size-small
+        @extend %font-type-sans-bold
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

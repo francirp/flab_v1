@@ -1,0 +1,8 @@
+//LAUNCHPAD LAB's TYPOGRAPHY MIXINS
+
+  //TEXT SHADOW
+  @mixin text-shadow($dims:1px 1px 1px, $color:rgba(0,0,0,0.3)) {
+      text-shadow: $dims $color; // Opera, FFX4
+      -moz-text-shadow:$dims $color; // FFX3.5
+      -webkit-text-shadow:$dims $color; // Safari/Chrome/WebKit
+  }

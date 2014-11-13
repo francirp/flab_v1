@@ -16,6 +16,7 @@ gem 'devise'
 gem 'figaro', '0.7.0'
 gem 'paperclip'
 gem 'slim'
+gem 'neat'
 
 group :development do
   gem 'better_errors'
