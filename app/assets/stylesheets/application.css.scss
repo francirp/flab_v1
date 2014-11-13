@@ -9,6 +9,12 @@
 
   // base
   @import "base/typography";
+  @import "base/layout";
 
   // components
   @import "components/header";
+
+  // page partials
+
+  // pages
+  @import "pages/home";

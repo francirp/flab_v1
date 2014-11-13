@@ -1,0 +1,4 @@
+@mixin standardBackgroundImage($url) {
+  background-repeat: no-repeat;
+  background-image: asset_url($url)
+}
