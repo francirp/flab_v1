@@ -1,60 +1,71 @@
-$topbar-color: black
 $topbar-height: 30px
 
 .header
 
-  .top-bar
-    @extend %font-type-sans-bold
-    @extend %background-blue-base
-    @extend %color-white-base
-    height: $topbar-height
-    line-height: $topbar-height
+  // .top-bar
+  //   @extend %font-type-sans-bold
+  //   @extend %background-blue-base
+  //   @extend %color-white-base
+  //   height: $topbar-height
+  //   line-height: $topbar-height
+  //   position: fixed
 
-    .info
-      @include outer-container
-      text-align: right
+  //   .info
+  //     @include app-outer-container
 
-      .email
-        @include span-columns(3)
-        @include shift(7)
+  //     .contact-info
+  //       @include span-columns(4 of 4)
+  //       text-align: center
+  //       @extend %font-size-tiny
 
-        @include media($tablet)
-          @include span-columns(5)
-          @include shift(1)
+  //       @include media($tablet)
+  //         text-align: right
+  //         @include span-columns(5 of 9)
+  //         @include shift(4 of 9)
 
-      .phone
-        @include span-columns(2)
-        @include omega
+  //       span.phone
+  //         margin-left: 2rem
 
-        @include media($tablet)
-          @include span-columns(5)
-          @include shift(1)
 
-  .navigation
+  .navigation-area
+    @extend .position-fixed
+    z-index: 999
     padding-top: 20px
-    @include outer-container
+    width: 100%
 
-    .logo
-      @include span-columns(3)
+    .navigation
+      @extend %layout-padding
+      @extend .position-relative
+      @include app-outer-container
 
-      .logo-image
-        max-width: 220px
+      .logo
+        @include span-columns(2 of 4)
 
-    .main-links
-      @include span-columns(7)
-      @include shift(2)
-      @include omega()
-      margin-top: 50px
-      text-align: right
+        @include media($tablet-landscape)
+          @include span-columns(2 of 9)
 
-      li
-        display: inline
-        margin-left: 1.5rem
+        .logo-image
+          max-width: 100%
 
-      a
-        @extend %text-upper
-        @extend %font-size-small
-        @extend %font-type-sans-bold
+      .main-links
+        @extend .display-none
+        text-align: right
+        margin-top: 65px
+
+        @include media($tablet-landscape)
+          @include span-columns(6 of 9)
+          @include shift(1 of 9)
+          @include omega()
+
+        li
+          display: inline
+          margin-left: 1.5rem
+
+        a
+          @extend %text-upper
+          @extend %font-size-small
+          @extend %font-type-sans-bold
+          @extend %color-white-base
 
 
 

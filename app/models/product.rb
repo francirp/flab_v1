@@ -32,6 +32,10 @@ class Product < ActiveRecord::Base
     Product.find_by_handle('adult-loft-bed') || Product.create(ADULT_LOFT_BED)
   end
 
+  def self.standard_bed
+    Product.find_by_handle('standard-bed') || Product.create(STANDARD_BED)
+  end
+
   def template
     handle.underscore
   end

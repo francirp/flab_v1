@@ -3,15 +3,19 @@ $loft-bed-color: $blue-base
 $bunk-bed-color: $grey-dark
 
 .main-callout-area
+  @include app-outer-container
   @extend .text-align-center
-  @include outer-container
+  padding-top: 300px
+  h1, .subheader
+    @extend %color-white-base
 .home
   .products
-    margin-top: 100px
+    padding-top: 100px
+    padding-bottom: 100px
 
     .product-callout
       @extend .float-left
-      width: 50%
+      @include span-columns(4 of 4)
 
       // LOFT BED & BUNK BED STYLES
       .featured-image
@@ -25,12 +29,13 @@ $bunk-bed-color: $grey-dark
         @extend %font-size-big
         @extend .margin-0
         line-height: $product-title-height
-        a
-          @extend %color-white-base
         text-align: center
 
+        a
+          @extend %color-white-base
+
       @include media($tablet-landscape)
-        width: 100%
+        @include span-columns(5 of 9)
 
 
       // LOFT BED STYLES
@@ -49,5 +54,6 @@ $bunk-bed-color: $grey-dark
           background-color: $bunk-bed-color
 
         .featured-image
-          @include standardBackgroundImage('home_bunk.jpg')
+          @include standardBackgroundImage('Laurie3-for-web.jpg')
+          background-position: center right
           background-size: cover

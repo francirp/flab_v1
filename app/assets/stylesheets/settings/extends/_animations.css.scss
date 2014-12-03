@@ -1,0 +1,15 @@
+//LAUNCHPAD LAB BASIC ANIMATIONS
+
+//BASIC ANIMATION
+.animated {
+  @include animation-duration(1s);
+  @include animation-fill-mode(both);
+}
+
+//FADE IN
+  @include keyframes(fadeIn) {
+    0% { opacity: 0; }
+    100% { opacity: 100%; }
+  }
+
+  .fadeIn  { @include animation-name(fadeIn) }

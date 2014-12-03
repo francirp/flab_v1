@@ -1,0 +1,135 @@
+//LAUNCHPAD LAB's PAGE HEADER
+
+  //PAGE HEADER VARIABLES
+  $placeholder: "http://placehold.it/1500x800";
+  $home: "city.jpg";
+  $about: "http://placehold.it/1500x800";
+  $work: "http://placehold.it/1500x800";
+  $contact: "contact.jpg";
+  $mda: "http://placehold.it/1500x800";
+  $contentweb: "contentweb/cover.jpg";
+  $algofast: "http://placehold.it/1500x800";
+
+  //PAGE HEADER LIST
+  $header-images: (
+    home         $home,
+    about        $about,
+    work         $placeholder,
+    contact      $contact,
+    mda          $placeholder,
+    content-web  $contentweb,
+    algofast     $placeholder,
+  );
+
+  //PAGE HEADER LOOP
+  @each $header-image in $header-images{
+    $page-name: nth($header-image, 1);
+    $image:     nth($header-image, 2);
+
+    .image-header-#{$page-name}{
+      background: $blue-base asset-url($image) no-repeat center center;
+      @include background-size(cover);
+      padding: 0 10px;
+      height: 450px;
+      @extend .position-relative;
+      z-index: 1;
+
+      &.grey-overlay:after {
+        content: ' ';
+        @extend %background-black-dark;
+        @extend .bottom-0;
+        @extend .left-0;
+        @extend .position-absolute;
+        @extend .right-0;
+        @extend .top-0;
+        opacity: 0.5;
+        z-index: -1;
+      }
+
+      &.blue-overlay:after {
+        content: ' ';
+        @extend %background-blue-base;
+        @extend .bottom-0;
+        @extend .left-0;
+        @extend .position-absolute;
+        @extend .right-0;
+        @extend .top-0;
+        opacity: 0.7;
+        z-index: -1;
+      }
+
+      @include media($tablet){ padding: 0 20px; height: 800px }
+
+      .image-container{
+        @extend .text-align-center;
+        @include outer-container();
+        @include rem(padding-top, 130px);
+
+        @include media($tablet){
+          @include rem(padding-top, 450px);
+          text-align: left;
+        }
+      }
+
+      .left{
+        width: 100%;
+        @include media($tablet){ @include span-columns(8 of 12); }
+      }
+
+      .right{
+        width: 100%;
+
+        @include media($tablet){
+          @include span-columns(3 of 12);
+          @include shift(1 of 12);
+        }
+      }
+    }
+
+    .image-header-title{
+      @extend .animated;
+      @extend %color-white-base;
+      @extend .fadeIn;
+      @extend %font-size-huger;
+      @extend %font-type-sans-bold;
+      @include animation-delay(0.1s);
+
+      @include media($tablet){
+        font-size: $font-size-mega;
+      }
+    }
+
+    .image-header-paragraph{
+      @extend .animated;
+      @extend %color-white-base;
+      @extend .fadeIn;
+      @extend %font-type-slab-base;
+      @extend %font-size-medium;
+      @include animation-delay(0.1s);
+      line-height: normal;
+
+      @include media($tablet){ font-size: $font-size-big; }
+    }
+
+    .service-callout{
+      @extend .animated;
+      @extend .display-none;
+      @extend .fadeIn;
+      @include animation-delay(0.75s);
+      @include media($tablet){ display: block }
+
+      h6{
+        @extend %color-white-base;
+        @extend %font-size-base;
+        @include rem(margin-top, 20px);
+
+        @include media($tablet){ margin-top: 0; }
+      }
+
+      li{
+        @extend %color-white-base;
+        @extend %font-size-base;
+      }
+    }
+  }
+

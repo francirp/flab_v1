@@ -8,4 +8,8 @@ module ApplicationHelper
     Product.adult_loft_bed
   end
 
+  def standard_bed
+    Product.standard_bed
+  end
+
 end
