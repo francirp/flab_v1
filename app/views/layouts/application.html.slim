@@ -9,5 +9,5 @@ html
     = render 'layouts/header'
     .notice = notice
     .alert = alert
-    div class="#{ content_for?(:page_layout) ? yield(:page_layout) : 'page' }"
+    .main
       = yield
