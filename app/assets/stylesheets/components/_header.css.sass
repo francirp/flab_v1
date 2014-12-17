@@ -1,84 +1,10 @@
-$topbar-height: 30px
-
 .header
-
-  // .top-bar
-  //   @extend %font-type-sans-bold
-  //   @extend %background-blue-base
-  //   @extend %color-white-base
-  //   height: $topbar-height
-  //   line-height: $topbar-height
-  //   position: fixed
-
-  //   .info
-  //     @include app-outer-container
-
-  //     .contact-info
-  //       @include span-columns(4 of 4)
-  //       text-align: center
-  //       @extend %font-size-tiny
-
-  //       @include media($tablet)
-  //         text-align: right
-  //         @include span-columns(5 of 9)
-  //         @include shift(4 of 9)
-
-  //       span.phone
-  //         margin-left: 2rem
-
-
   .navigation-area
     @extend .position-fixed
     z-index: 999
-    padding-top: 20px
     width: 100%
+    height: $navigation-height
+    line-height: $navigation-height
 
     .navigation
-      @extend %layout-padding
       @extend .position-relative
-      @include app-outer-container
-
-      .logo
-        @include span-columns(2 of 4)
-
-        @include media($tablet-landscape)
-          @include span-columns(2 of 9)
-
-        .logo-image
-          max-width: 100%
-
-      .main-links
-        @extend .display-none
-        text-align: right
-        margin-top: 65px
-
-        @include media($tablet-landscape)
-          @include span-columns(6 of 9)
-          @include shift(1 of 9)
-          @include omega()
-
-        li
-          display: inline
-          margin-left: 1.5rem
-
-        a
-          @extend %text-upper
-          @extend %font-size-small
-          @extend %font-type-sans-bold
-          @extend %color-white-base
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

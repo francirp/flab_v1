@@ -1,39 +1,16 @@
-.products
-  .product-callout.loft-bed
-    .product-title-area
-      h2.product-title = link_to 'Loft Bed', loft_bed
-    = link_to loft_bed do
-      .featured-image
-    .bottom
-      .key-points
-        h4 Key Points
-        p Increase the space in your home or apartment with a loft bed that was designed with the adult in mind.
-        ul
-          li 2000 lb weight capacity
-          li 5 colors
-          li Simple assembly
-          li Zero sway
-      .testimonial
-        h4 Testimonial
-        p “It was truly a pleasure ordering this loft bed, completely restored my faith that there are good companies who provide amazing service and a very high-quality product. The bed looks and works amazing, it is easy to assemble, incredibly sleek with a design that is just plain smart. It has doubled the amount of room I have in my studio apartment in the village!”
-        .signature Jeremy, New York City
-      = link_to 'Learn More', loft_bed
-  .product-callout.bunk-bed
-    .product-title-area
-      h2.product-title = link_to 'Bunk Bed', bunk_bed
-    = link_to bunk_bed do
-      .featured-image
-    .bottom
-      .key-points
-        h4 Key Points
-        p Sleep more guests in your house or vacation home with the most robust and elegant bunk bed on the market. We are one of the only providers of queen over queen and king over king bunk beds.
-        ul
-          li 2000 lb weight capacity on each mattress
-          li King, queen, full, and twin sizes
-          li Customizable
-          li Extremely sturdy
-      .testimonial
-        h4 Testimonial
-        p “We could not be happier with our bed! The set up was easy.We have twin 15 year old sons who weigh 170 pounds each. They both confirm that the bed does not move at all. It is very rigid/firm. The construction is outstanding, super high quality. An outstanding value for the price. We would recommend it to anyone who wants a quality bed that will last for decades. And it looks great too!”
-        .signature Alfonso Alejo, NYC
-      = link_to 'Learn More', bunk_bed
+section.products
+  .featured
+    .image-area = link_to image_tag('home_loft.jpg'), loft_bed
+    .callout-area
+      h5.product-title = link_to 'Lofts', loft_bed
+      h2.product-title = link_to 'Loft Beds Designed for Adults', loft_bed
+      p Increase the space in your home or apartment with a loft bed that was designed with the adult in mind.
+      .button-area = link_to 'More Information', loft_bed, class: 'button-get'
+  .secondary
+    .callout-area
+      h5.product-title = link_to 'Bunks', bunk_bed
+      h2.product-title = link_to 'Adult Bunk Beds', bunk_bed
+      p Sleep more guests in your house or vacation home with the most robust and elegant bunk bed on the market. We are one of the only providers of queen over queen and king over king bunk beds.
+      .button-area = link_to 'More Information', bunk_bed, class: 'button-get'
+    .image-area = link_to image_tag('home_bunk.jpg'), bunk_bed
+    .image-area = link_to image_tag('bunk.jpeg'), bunk_bed
